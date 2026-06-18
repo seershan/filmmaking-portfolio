@@ -1,0 +1,2 @@
+.home-page .hero-shell { min-height: calc(100svh - 140px); }
+.home-page .hero-copy h1 { text-wrap: balance; }

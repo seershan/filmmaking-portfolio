@@ -1,0 +1,82 @@
+.connect-page .section-title h2{
+    margin-top:10px;
+}
+
+.contact-hero{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-kicker{
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    opacity:.65;
+    font-size:.8rem;
+}
+
+.contact-title{
+    margin:18px auto;
+    max-width:750px;
+    line-height:1.15;
+    font-size:clamp(2rem,4vw,3.5rem);
+}
+
+.contact-text{
+    max-width:650px;
+    margin:0 auto 40px;
+    opacity:.75;
+    line-height:1.8;
+}
+
+.contact-links{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.contact-link{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+
+    padding:28px;
+
+    text-decoration:none;
+    color:inherit;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s ease;
+}
+
+.contact-link:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.08);
+}
+
+.contact-link span{
+    font-size:1.15rem;
+    font-weight:600;
+}
+
+.contact-link small{
+    opacity:.7;
+    font-size:.95rem;
+}
+
+@media(max-width:768px){
+
+    .contact-links{
+        grid-template-columns:1fr;
+    }
+
+    .contact-title{
+        font-size:2rem;
+    }
+
+}
