@@ -1,0 +1,1 @@
+Replace files inside assets/images, assets/posters, assets/thumbnails, and assets/videos while keeping names consistent or updating the arrays in the page JS files.

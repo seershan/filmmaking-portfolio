@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{PortfolioSite.setupNav("");PortfolioSite.initImageFallback(document);});

@@ -1,0 +1,343 @@
+.film-page .section-title h2 {
+    margin-top: 10px;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.film-card {
+    width: 100%;
+    padding: 14px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.film-card.is-open {
+    grid-column: 1 / -1;
+}
+
+.film-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.film-poster-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.film-poster {
+    position: relative;
+    width: 220px;
+    aspect-ratio: 2 / 3;
+    border: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.film-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transition: transform .6s ease, filter .6s ease;
+}
+
+.film-card:hover .film-poster img {
+    transform: scale(1.05);
+    filter: brightness(1.04);
+}
+
+.film-poster-badge {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.film-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.film-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.film-head h3 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.film-head p {
+    margin: 0;
+    font-size: 0.88rem;
+    opacity: 0.72;
+}
+
+.film-badge-right {
+    display: none;
+}
+
+.expand-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.expand-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 18px;
+    border-radius: 999px;
+    border: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(88, 88, 88, 0.88);
+    transition: transform .25s ease, background .25s ease;
+}
+
+.expand-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(141, 141, 141, 0.98);
+}
+
+.film-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: max-height .7s ease, opacity .35s ease, transform .35s ease, margin-top .35s ease;
+    margin-top: 0;
+}
+
+.film-card.is-open .film-details {
+    max-height: 5000px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 18px;
+}
+
+.film-panel {
+    padding: 22px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.film-summary {
+    margin: 0 0 18px;
+    padding: 16px 16px 16px 18px;
+    border-left: 3px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.film-summary-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+}
+
+.film-summary p {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.75;
+    opacity: 0.94;
+}
+
+.film-detail-title {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    line-height: 1.15;
+}
+
+.film-description {
+    margin: 0 0 14px;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    opacity: 0.92;
+}
+
+.film-meta-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.film-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.credit-row {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.credit-label {
+    display: block;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.72;
+    margin-bottom: 5px;
+}
+
+.credit-value {
+    display: block;
+    font-size: 0.93rem;
+    line-height: 1.55;
+}
+
+.film-section {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.film-section h5 {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+}
+
+.film-list {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    opacity: 0.92;
+}
+
+.film-actions {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.watch-now {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform .25s ease, background .25s ease;
+}
+
+.watch-now:hover {
+    transform: translateY(-2px);
+    background: rgb(87, 87, 87);
+}
+
+.toggle-hint {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    opacity: 0.65;
+}
+
+@media (max-width: 1100px) {
+    .film-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .film-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .film-card {
+        padding: 12px;
+    }
+
+    .film-poster {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .film-panel {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .film-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .film-poster {
+        max-width: 100%;
+    }
+}
